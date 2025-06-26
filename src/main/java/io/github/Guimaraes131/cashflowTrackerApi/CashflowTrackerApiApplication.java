@@ -1,4 +1,4 @@
-package io.githun.Guimaraes131.cashflowTrackerApi;
+package io.github.Guimaraes131.cashflowTrackerApi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
