@@ -4,6 +4,7 @@ import io.github.Guimaraes131.cashflowTrackerApi.controller.dto.TransactionDTO;
 import io.github.Guimaraes131.cashflowTrackerApi.model.Transaction;
 import io.github.Guimaraes131.cashflowTrackerApi.model.TransactionType;
 import io.github.Guimaraes131.cashflowTrackerApi.service.TransactionService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +27,7 @@ public class TransactionController {
     }
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody TransactionDTO dto) {
+    public ResponseEntity<?> create(@RequestBody @Valid TransactionDTO dto) {
         var transaction = dto.mapToTransaction();
         service.create(transaction);
 
